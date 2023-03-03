@@ -2,7 +2,7 @@
 A fully configurable store system with a modern and simple design.
 With the ease of creating infinite stores each with different items, giving the possibility to create, for example, only weapons stores.
 
-![alt text](https://imgur.com/hXO49YI.png)
+[![alt text](https://cdn.discordapp.com/attachments/1046563483652718624/1081327847374864455/image.png)
 
 
 
