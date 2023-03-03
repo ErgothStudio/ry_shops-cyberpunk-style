@@ -1,35 +1,33 @@
+
+local QBCore = exports['qb-core']:GetCoreObject()
+
 InMenu = false
 sleep = true
-
-local Framework = nil
-
-if Config.Framework == "qb-core" then
-    Framework = exports['qb-core']:GetCoreObject()
-elseif Config.Framework == "esx" then
-    Framework = exports['es_extended']:getSharedObject()
-end
 
 Citizen.CreateThread(function()
     while true do 
         Citizen.Wait(1)
         sleep = true
-		local playerPed = PlayerPedId()
-		local coords = GetEntityCoords(playerPed)
+        local playerPed = PlayerPedId()
+        local coords = GetEntityCoords(playerPed)
         for k,v in pairs(Config.Locations) do
             if not InMenu then
                 local distance = #(coords - v.coords)
-                    if distance < 1 then
-                        sleep = false
-                        DrawText3D(v.coords.x, v.coords.y, v.coords.z + 0.25, v.marker.text)
-                        if IsControlJustReleased(0, v.marker.key) then
+                if distance < 1 then
+                    sleep = false
+                    DrawText3D(v.coords.x, v.coords.y, v.coords.z + 0.25, v.marker.text)
+                    if IsControlJustReleased(0, v.marker.key) then
+                        if not v.trabalho or QBCore.Functions.GetPlayerData().job.name == v.job then
                             open_ui(k, v.shop_name)
+                        else
+                            QBCore.Functions.Notify("Você não tem permissão para acessar esta loja.", "error")
                         end
                     end
-
-                    if distance <= 15 then
-                        sleep = false
-                        DrawMarker(v.marker.type, v.coords.x, v.coords.y, v.coords.z, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, v.marker.size.x, v.marker.size.y, v.marker.size.z, v.marker.color.r, v.marker.color.g, v.marker.color.b, 50, false, true, 2, false, nil, nil, false)
-                    end
+                end
+                if distance <= 15 then
+                    sleep = false
+                    DrawMarker(v.marker.type, v.coords.x, v.coords.y, v.coords.z, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, v.marker.size.x, v.marker.size.y, v.marker.size.z, v.marker.color.r, v.marker.color.g, v.marker.color.b, 50, false, true, 2, false, nil, nil, false)
+                end
             end
         end
         if sleep then
@@ -37,6 +35,9 @@ Citizen.CreateThread(function()
         end
     end
 end)
+
+
+
 
 for k, v in pairs(Config.Locations) do
 	shops = AddBlipForCoord(v.coords.x, v.coords.y, v.coords.z)
