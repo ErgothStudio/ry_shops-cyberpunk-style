@@ -28,6 +28,7 @@ Config.Locations = {
         blip = {
             name = '24/7 Shop', -- name of the blip in map.
             sprite = 59, -- sprite of the blip.
+            useBlip = true,
             scale = 0.8, -- scale of the.
             color = 2 -- color of the. 
         },
@@ -115,6 +116,7 @@ Config.Locations = {
         blip = {
             name = '24/7 Shop', -- name of the blip in map.
             sprite = 59, -- sprite of the blip.
+            useBlip = true,
             scale = 0.8, -- scale of the.
             color = 2 -- color of the. 
         },
@@ -202,6 +204,7 @@ Config.Locations = {
         blip = {
             name = '24/7 Shop', -- name of the blip in map.
             sprite = 59, -- sprite of the blip.
+            useBlip = true,
             scale = 0.8, -- scale of the.
             color = 2 -- color of the. 
         },
@@ -289,6 +292,7 @@ Config.Locations = {
         blip = {
             name = '24/7 Shop', -- name of the blip in map.
             sprite = 59, -- sprite of the blip.
+            useBlip = true,
             scale = 0.8, -- scale of the.
             color = 2 -- color of the. 
         },
@@ -376,6 +380,7 @@ Config.Locations = {
         blip = {
             name = '24/7 Shop', -- name of the blip in map.
             sprite = 59, -- sprite of the blip.
+            useBlip = true,
             scale = 0.8, -- scale of the.
             color = 2 -- color of the. 
         },
@@ -463,6 +468,7 @@ Config.Locations = {
         blip = {
             name = '24/7 Shop', -- name of the blip in map.
             sprite = 59, -- sprite of the blip.
+            useBlip = true,
             scale = 0.8, -- scale of the.
             color = 2 -- color of the. 
         },
@@ -550,6 +556,7 @@ Config.Locations = {
         blip = {
             name = '24/7 Shop', -- name of the blip in map.
             sprite = 59, -- sprite of the blip.
+            useBlip = true,
             scale = 0.8, -- scale of the.
             color = 2 -- color of the. 
         },
@@ -637,6 +644,7 @@ Config.Locations = {
         blip = {
             name = '24/7 Shop', -- name of the blip in map.
             sprite = 59, -- sprite of the blip.
+            useBlip = true,
             scale = 0.8, -- scale of the.
             color = 2 -- color of the. 
         },
@@ -724,6 +732,7 @@ Config.Locations = {
         blip = {
             name = '24/7 Shop', -- name of the blip in map.
             sprite = 59, -- sprite of the blip.
+            useBlip = true,
             scale = 0.8, -- scale of the.
             color = 2 -- color of the. 
         },
@@ -811,6 +820,7 @@ Config.Locations = {
         blip = {
             name = '24/7 Shop', -- name of the blip in map.
             sprite = 59, -- sprite of the blip.
+            useBlip = true,
             scale = 0.8, -- scale of the.
             color = 2 -- color of the. 
         },
@@ -898,6 +908,7 @@ Config.Locations = {
         blip = {
             name = '24/7 Shop', -- name of the blip in map.
             sprite = 59, -- sprite of the blip.
+            useBlip = true,
             scale = 0.8, -- scale of the.
             color = 2 -- color of the. 
         },
@@ -985,6 +996,7 @@ Config.Locations = {
         blip = {
             name = '24/7 Shop', -- name of the blip in map.
             sprite = 59, -- sprite of the blip.
+            useBlip = true,
             scale = 0.8, -- scale of the.
             color = 2 -- color of the. 
         },
@@ -1072,6 +1084,7 @@ Config.Locations = {
         blip = {
             name = '24/7 Shop', -- name of the blip in map.
             sprite = 59, -- sprite of the blip.
+            useBlip = true,
             scale = 0.8, -- scale of the.
             color = 2 -- color of the. 
         },
@@ -1159,6 +1172,7 @@ Config.Locations = {
         blip = {
             name = '24/7 Shop', -- name of the blip in map.
             sprite = 59, -- sprite of the blip.
+            useBlip = true,
             scale = 0.8, -- scale of the.
             color = 2 -- color of the. 
         },
@@ -1246,6 +1260,7 @@ Config.Locations = {
         blip = {
             name = '24/7 Shop', -- name of the blip in map.
             sprite = 59, -- sprite of the blip.
+            useBlip = true,
             scale = 0.8, -- scale of the.
             color = 2 -- color of the. 
         },
@@ -1333,6 +1348,7 @@ Config.Locations = {
         blip = {
             name = '24/7 Shop', -- name of the blip in map.
             sprite = 59, -- sprite of the blip.
+            useBlip = true,
             scale = 0.8, -- scale of the.
             color = 2 -- color of the. 
         },
@@ -1420,6 +1436,7 @@ Config.Locations = {
         blip = {
             name = '24/7 Shop', -- name of the blip in map.
             sprite = 59, -- sprite of the blip.
+            useBlip = true,
             scale = 0.8, -- scale of the.
             color = 2 -- color of the. 
         },
@@ -1507,6 +1524,7 @@ Config.Locations = {
         blip = {
             name = '24/7 Shop', -- name of the blip in map.
             sprite = 59, -- sprite of the blip.
+            useBlip = true,
             scale = 0.8, -- scale of the.
             color = 2 -- color of the. 
         },
@@ -1594,6 +1612,7 @@ Config.Locations = {
         blip = {
             name = '24/7 Shop', -- name of the blip in map.
             sprite = 59, -- sprite of the blip.
+            useBlip = true,
             scale = 0.8, -- scale of the.
             color = 2 -- color of the. 
         },
@@ -1667,6 +1686,54 @@ Config.Locations = {
             }
         }
     },
+    ['arsenalpolicia'] = {  -- name of the location, you can put whatever you like.
+        shop_name = "Arsenal da Polícia",
+        job = "police",
+        coords = vector3(461.24, -980.54, 30.69), -- coord for the menu.
+        marker = {
+            key = 38, -- key to open the menu. Default E
+            type = 2, -- type of marker.
+            size  = {x = 0.3, y = 0.3, z = 0.3}, -- size of marker.
+            color = {r = 255, g = 255, b = 255}, -- color of marker.
+            text = '[ ~g~E~w~ ] Shop' -- text of marker.
+        },
+        blip = {
+            name = '24/7 Shop', -- name of the blip in map.
+            sprite = 59, -- sprite of the blip.
+            useBlip = false,
+            scale = 0.8, -- scale of the.
+            color = 2 -- color of the. 
+        },
+        products = {
+            [1] = {
+                name = "Tosti", -- name in the menu
+                item = "tosti", -- item name in database *remember that you need the item in database to work 100%*
+                image = "tosti.png", -- image of product in html/assets
+                -- IMAGE RESOLUTION --
+                -- 150x100 Pixels --
+                -- IMAGE RESOLUTION --
+                price = 100, -- price of product
+                available = true, -- if is available to buy it or not
+                type = "item" -- item or weapon
+            },
+            [2] = {
+                name = "Garrafa d'Agua",
+                item = "water_bottle",
+                image = "water_bottle.png",
+                price = 150,
+                available = true,
+                type = "item"
+            },
+            [3] = {
+                name = "Cerveja",
+                item = "beer",
+                image = "beer.png",
+                price = 150,
+                available = true,
+                type = "item"
+            }
+        }
+    },
     ['weaponshop1'] = {  -- name of the location, you can put whatever you like.
         shop_name = "Weapon Shop",
         job = nil,
@@ -1681,6 +1748,7 @@ Config.Locations = {
         blip = {
             name = '24/7 Weapon Shop', -- name of the blip in map.
             sprite = 110, -- sprite of the blip.
+            useBlip = true,
             scale = 0.8, -- scale of the.
             color = 1 -- color of the. 
         },
