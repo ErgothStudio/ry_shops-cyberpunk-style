@@ -17,7 +17,7 @@ Citizen.CreateThread(function()
                     sleep = false
                     DrawText3D(v.coords.x, v.coords.y, v.coords.z + 0.25, v.marker.text)
                     if IsControlJustReleased(0, v.marker.key) then
-                        if not v.trabalho or QBCore.Functions.GetPlayerData().job.name == v.job then
+                        if not v.job or QBCore.Functions.GetPlayerData().job.name == v.job then
                             open_ui(k, v.shop_name)
                         else
                             QBCore.Functions.Notify("Você não tem permissão para acessar esta loja.", "error")
@@ -40,14 +40,16 @@ end)
 
 
 for k, v in pairs(Config.Locations) do
-	shops = AddBlipForCoord(v.coords.x, v.coords.y, v.coords.z)
-	SetBlipSprite (shops, v.blip.sprite)
-	SetBlipDisplay(shops, 4)
-	SetBlipScale  (shops, 0.65)
-	SetBlipAsShortRange(shops, true)
-	SetBlipColour(shops, v.blip.color)
-	BeginTextCommandSetBlipName("STRING")
-	AddTextComponentSubstringPlayerName(v.blip.name)
-	EndTextCommandSetBlipName(shops)
+    if v.blip.useBlip then
+        local shops = AddBlipForCoord(v.coords.x, v.coords.y, v.coords.z)
+        SetBlipSprite(shops, v.blip.sprite)
+        SetBlipDisplay(shops, 4)
+        SetBlipScale(shops, 0.65)
+        SetBlipAsShortRange(shops, true)
+        SetBlipColour(shops, v.blip.color)
+        BeginTextCommandSetBlipName("STRING")
+        AddTextComponentSubstringPlayerName(v.blip.name)
+        EndTextCommandSetBlipName(shops)
+    end
 end
 
